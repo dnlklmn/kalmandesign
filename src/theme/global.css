@@ -1,0 +1,7 @@
+:root {
+    --color-purple-500: #4d50ab;
+    --color-purple-600: #7275c0;
+    --color-peach-700: #eea0af;
+    --color-peach-800: #f3bec8;
+    --color-background-default: linear-gradient(70deg, #4d50ab, #eea0af);
+}
