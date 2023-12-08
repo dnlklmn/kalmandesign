@@ -1,5 +1,41 @@
 @config "../../tailwind.config.js";
+@font-face {
+    font-family: "iAWriterQuattroSBold";
+    src:
+        local("iAWriterQuattroSBold"),
+        url(src/fonts/iAWriterQuattroSBold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "iAWriterQuattroSBoldItalic";
+    src:
+        local("iAWriterQuattroSBoldItalic"),
+        url(src/fonts/iAWriterQuattroSBoldItalic.ttf) format("truetype");
+}
+@font-face {
+    font-family: "iAWriterQuattroSRegular";
+    src:
+        local("iAWriterQuattroSRegular"),
+        url(src/fonts/iAWriterQuattroSRegular.ttf) format("truetype");
+}
+@font-face {
+    font-family: "iAWriterQuattroSItalic";
+    src:
+        local("iAWriterQuattroSItalic"),
+        url(src/fonts/iAWriterQuattroSItalic.ttf) format("truetype");
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h2 {
+        @apply font-iaI text-3xl;
+    }
+    h6 {
+        @apply font-iaB text-base tracking-widest;
+    }
+    body {
+        @apply font-iaR text-base leading-relaxed;
+    }
+}

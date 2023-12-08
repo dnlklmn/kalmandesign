@@ -16,6 +16,12 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        iaR: "iAWriterQuattroSRegular",
+        iaI: "iAWriterQuattroSItalic",
+        iaB: "iAWriterQuattroSBold",
+        iaBI: "iAWriterQuattroSBoldItalic",
+      },
       colors: {
         background: {
           default: "var(--color-background-default)",
@@ -28,6 +34,7 @@ export default {
         },
         foreground: {
           contrast: "var(--color-peach-800)",
+          secondary: "var(--color-purple-500)",
         },
       },
       keyframes: {
