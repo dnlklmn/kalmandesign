@@ -45,11 +45,11 @@ export default function Teaser({ title }: { title: string }) {
           <h2>{title}</h2>
           <h6 className="text-foreground-contrast">WEB APP</h6>
         </div>
-        <body>
+        <p>
           Before relaunching the app we revamped the web app to increase consistency and help
           explain the concept of peer to peer code collaboration.
-        </body>
-        <body className="font-iaI">Coming soon...</body>
+        </p>
+        <p className="font-iaI">Coming soon...</p>
       </div>
       <div className="h-1/2 w-1/2 max-w-[840px] bg-white" />
     </div>

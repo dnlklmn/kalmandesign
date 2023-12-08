@@ -3,25 +3,25 @@
     font-family: "iAWriterQuattroSBold";
     src:
         local("iAWriterQuattroSBold"),
-        url(src/fonts/iAWriterQuattroSBold.ttf) format("truetype");
+        url(../fonts/iAWriterQuattroSBold.ttf) format("truetype");
 }
 @font-face {
     font-family: "iAWriterQuattroSBoldItalic";
     src:
         local("iAWriterQuattroSBoldItalic"),
-        url(src/fonts/iAWriterQuattroSBoldItalic.ttf) format("truetype");
+        url(../fonts/iAWriterQuattroSBoldItalic.ttf) format("truetype");
 }
 @font-face {
     font-family: "iAWriterQuattroSRegular";
     src:
         local("iAWriterQuattroSRegular"),
-        url(src/fonts/iAWriterQuattroSRegular.ttf) format("truetype");
+        url(../fonts/iAWriterQuattroSRegular.ttf) format("truetype");
 }
 @font-face {
     font-family: "iAWriterQuattroSItalic";
     src:
         local("iAWriterQuattroSItalic"),
-        url(src/fonts/iAWriterQuattroSItalic.ttf) format("truetype");
+        url(../fonts/iAWriterQuattroSItalic.ttf) format("truetype");
 }
 
 @tailwind base;
@@ -35,7 +35,7 @@
     h6 {
         @apply font-iaB text-base tracking-widest;
     }
-    body {
+    p {
         @apply font-iaR text-base leading-relaxed;
     }
 }

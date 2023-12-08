@@ -58,8 +58,8 @@ function App() {
         <h6 className="text-foreground-secondary">ABOUT</h6>
       </div>
       <div ref={scrollRef} className="h-screen snap-y snap-mandatory overflow-scroll">
-        {projects.map((project) => (
-          <Teaser title={project} />
+        {projects.map((project, index) => (
+          <Teaser title={project} key={index} />
         ))}
       </div>
 
