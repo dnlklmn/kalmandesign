@@ -1,12 +1,12 @@
 import { useRef, useState, useEffect } from "react";
 import ScrollButton from "./scroll-button";
 import Teaser from "./teaser";
-import RadicleTeaser from "@/assets/radicle/RadicleTeaser";
+import RadicleRedesignTeaser from "@/assets/radicle/radicle-redesign-teaser";
 
 const projects = [
   {
     title: "Radicle Redesign",
-    teaser: <RadicleTeaser />,
+    teaser: <RadicleRedesignTeaser />,
   },
   { title: "Radicle Design System", teaser: null },
   { title: "Polkadot Design System", teaser: null },

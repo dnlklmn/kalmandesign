@@ -5,7 +5,7 @@ let y: number;
 let entryX: number;
 let entryY: number;
 
-export default function RadicleTeaser() {
+export default function RadicleRedesignTeaser() {
   const imageContainer: HTMLElement | null = document.getElementById("image-container");
 
   function registerEntry(event: React.MouseEvent<HTMLDivElement>) {
