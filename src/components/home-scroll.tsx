@@ -6,7 +6,7 @@ import RadicleRedesignTeaser from "@/assets/radicle/radicle-redesign-teaser";
 const projects = [
   {
     title: "Radicle Redesign",
-    teaser: <RadicleRedesignTeaser />,
+    teaser: <RadicleRedesignTeaser linkTo="radicle-redesign" />,
   },
   { title: "Radicle Design System", teaser: null },
   { title: "Polkadot Design System", teaser: null },

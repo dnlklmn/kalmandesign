@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Home from "./Home.png";
 
 let x: number;
@@ -5,7 +6,7 @@ let y: number;
 let entryX: number;
 let entryY: number;
 
-export default function RadicleRedesignTeaser() {
+export default function RadicleRedesignTeaser({ linkTo }: { linkTo: string }) {
   const imageContainer: HTMLElement | null = document.getElementById("image-container");
 
   function registerEntry(event: React.MouseEvent<HTMLDivElement>) {
@@ -28,8 +29,8 @@ export default function RadicleRedesignTeaser() {
   function returnToStart() {
     if (imageContainer) {
       imageContainer.style.transition = "all 0.5s ease";
-      imageContainer.style.left = `-12px`;
-      imageContainer.style.top = `-12px`;
+      imageContainer.style.left = `-8px`;
+      imageContainer.style.top = `-8px`;
     }
   }
 
@@ -41,25 +42,27 @@ export default function RadicleRedesignTeaser() {
       onMouseLeave={returnToStart}
       className="relative h-fit w-1/2"
     >
-      <>
-        <img src={Home} />
-        <div
-          id="image-container"
-          className="trasnsition-all absolute -left-4 -top-4 flex h-full w-full flex-col gap-3"
-        >
-          <div className="border-foreground-contrast h-fit w-full border-4 p-1.5">
-            <p className="bg-foreground-contrast h-fit w-fit p-1.5 italic">App</p>
-          </div>
-          <div className="border-foreground-contrast flex h-full w-full gap-3">
-            <div className="border-foreground-contrast h-full w-1/5 border-4 p-1.5">
-              <p className="bg-foreground-contrast h-fit w-fit p-1.5 italic">Project</p>
+      <Link to={linkTo}>
+        <>
+          <img src={Home} />
+          <div
+            id="image-container"
+            className="trasnsition-all absolute -left-2 -top-2 flex h-full w-full flex-col gap-2"
+          >
+            <div className="border-foreground-contrast h-fit w-full border-4 p-1">
+              <p className="bg-foreground-contrast h-fit w-fit p-1 italic">App</p>
             </div>
-            <div className="border-foreground-contrast h-full w-4/5 border-4 p-1.5">
-              <p className="bg-foreground-contrast h-fit w-fit p-1.5 italic">Content</p>
+            <div className="border-foreground-contrast flex h-full w-full gap-2">
+              <div className="border-foreground-contrast h-full w-1/5 border-4 p-1">
+                <p className="bg-foreground-contrast h-fit w-fit p-1 italic">Project</p>
+              </div>
+              <div className="border-foreground-contrast h-full w-4/5 border-4 p-1">
+                <p className="bg-foreground-contrast h-fit w-fit p-1 italic">Content</p>
+              </div>
             </div>
           </div>
-        </div>
-      </>
+        </>
+      </Link>
     </div>
   );
 }
