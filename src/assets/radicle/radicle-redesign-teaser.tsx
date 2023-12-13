@@ -21,8 +21,8 @@ export default function RadicleRedesignTeaser({ linkTo }: { linkTo: string }) {
 
     if (imageContainer) {
       imageContainer.style.transition = "all 0s ease";
-      imageContainer.style.left = `${-12 + x / 72}px`;
-      imageContainer.style.top = `${-12 + y / 72}px`;
+      imageContainer.style.left = `${-8 + x / 72}px`;
+      imageContainer.style.top = `${-8 + y / 72}px`;
     }
   }
 
