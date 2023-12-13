@@ -40,9 +40,9 @@ export default function RadicleRedesignTeaser({ linkTo }: { linkTo: string }) {
   return (
     <div
       id="tracking-div"
+      onMouseMove={followCursor}
+      onMouseOut={returnToStart}
       onMouseEnter={registerEntry}
-      onMouseOver={followCursor}
-      onMouseLeave={returnToStart}
       className="relative h-fit w-1/2"
     >
       <Link to={linkTo}>
