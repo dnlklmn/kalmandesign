@@ -13,6 +13,7 @@ export default function RadicleRedesignTeaser({ linkTo }: { linkTo: string }) {
     // Get position of the cursor within the div.
     entryX = event.clientX;
     entryY = event.clientY;
+    console.log("registerEntry: ", entryX, entryY);
   }
 
   function followCursor(event: React.MouseEvent<HTMLDivElement>) {
@@ -23,6 +24,7 @@ export default function RadicleRedesignTeaser({ linkTo }: { linkTo: string }) {
       imageContainer.style.transition = "all 0s ease";
       imageContainer.style.left = `${-8 + x / 72}px`;
       imageContainer.style.top = `${-8 + y / 72}px`;
+      console.log("followCursor: ", x, y);
     }
   }
 
@@ -31,6 +33,7 @@ export default function RadicleRedesignTeaser({ linkTo }: { linkTo: string }) {
       imageContainer.style.transition = "all 0.5s ease";
       imageContainer.style.left = `-8px`;
       imageContainer.style.top = `-8px`;
+      console.log("returnToStart");
     }
   }
 

@@ -6,6 +6,7 @@ import "./theme/index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RadicleRedesign from "./pages/radicle-redesign.tsx";
+import RadicleDesignSystem from "./pages/radicle-design-system.tsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/radicle-redesign",
     element: <RadicleRedesign />,
+  },
+  {
+    path: "/radicle-design-system",
+    element: <RadicleDesignSystem />,
   },
 ]);
 
