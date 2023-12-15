@@ -7,10 +7,14 @@ import RadicleDesignSystem from "@/assets/radicle/design-system";
 const projects = [
   {
     title: "Radicle Redesign",
+    description:
+      "We revamped the web app to increase consistency and help explain the concept of peer to peer code collaboration.",
     teaser: <RadicleRedesignTeaser linkTo="radicle-redesign" />,
+    button: "View Case Study",
   },
   {
     title: "Radicle Design System",
+    description: "A design system to help Radicle build a consistent and scalable product.",
     teaser: <RadicleDesignSystem linkTo="radicle-design-system" />,
   },
   { title: "Polkadot Design System", teaser: null },
@@ -67,7 +71,12 @@ export default function HomeScroll() {
     <>
       <div ref={scrollRef} className="h-screen snap-y snap-mandatory overflow-scroll">
         {projects.map((project, index) => (
-          <Teaser title={project.title} key={index}>
+          <Teaser
+            title={project.title}
+            button={project.button}
+            description={project.description}
+            key={index}
+          >
             {project.teaser}
           </Teaser>
         ))}

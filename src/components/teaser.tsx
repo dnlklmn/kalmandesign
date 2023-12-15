@@ -1,7 +1,18 @@
 import { useState, useRef, useEffect } from "react";
 import Icon from "./icon";
+import { Button } from "./ui/button";
 
-export default function Teaser({ title, children }: { title: string; children: React.ReactNode }) {
+export default function Teaser({
+  title,
+  children,
+  description,
+  button,
+}: {
+  title: string;
+  children: React.ReactNode;
+  description?: string;
+  button?: string;
+}) {
   const [inView, setInView] = useState(false);
   const componentRef = useRef(null);
 
@@ -45,11 +56,12 @@ export default function Teaser({ title, children }: { title: string; children: R
           <h2>{title}</h2>
           <h6 className="text-foreground-contrast">WEB APP</h6>
         </div>
-        <p>
-          Before relaunching the app we revamped the web app to increase consistency and help
-          explain the concept of peer to peer code collaboration.
-        </p>
-        <p className="font-iaI">Coming soon...</p>
+        <p>{description}</p>
+        {button ? (
+          <Button variant="outline">{button}</Button>
+        ) : (
+          <p className="font-iaI">Coming soon...</p>
+        )}
       </div>
       {children}
     </div>
