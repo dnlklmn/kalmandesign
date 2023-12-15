@@ -17,7 +17,12 @@ export default function RadicleRedesignTeaser({ linkTo }: { linkTo: string }) {
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
     setEntry({ x: e.nativeEvent.clientX, y: e.nativeEvent.clientY }),
-      console.log("enter-x: ", e.nativeEvent.clientX, "enter-y: ", e.nativeEvent.clientY);
+      console.log(
+        "enter-x: ",
+        e.nativeEvent.clientX,
+        "enter-y: ",
+        e.nativeEvent.clientY
+      );
     setMouseOver(true);
   };
 
@@ -32,7 +37,7 @@ export default function RadicleRedesignTeaser({ linkTo }: { linkTo: string }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       id="tracking-div"
-      className="relative h-fit w-1/2 "
+      className="relative w-1/2 h-fit "
     >
       <Link to={linkTo}>
         <>
@@ -45,18 +50,26 @@ export default function RadicleRedesignTeaser({ linkTo }: { linkTo: string }) {
             }}
             id="image-container"
             className={`absolute flex h-full w-full flex-col gap-2 ${
-              mouseOver ? "transition-none" : "trasnsition-all duration-300 ease-out"
+              mouseOver
+                ? "transition-none"
+                : "trasnsition-all duration-300 ease-out"
             }`}
           >
-            <div className="border-foreground-contrast h-fit w-full border-4 p-1">
-              <p className="bg-foreground-contrast h-fit w-fit p-1 italic">App</p>
+            <div className="w-full p-1 border-4 border-foreground-contrast h-fit">
+              <p className="p-1 italic bg-foreground-contrast h-fit w-fit">
+                App
+              </p>
             </div>
-            <div className="border-foreground-contrast flex h-full w-full gap-2">
-              <div className="border-foreground-contrast h-full w-1/5 border-4 p-1">
-                <p className="bg-foreground-contrast h-fit w-fit p-1 italic">Project</p>
+            <div className="flex w-full h-full gap-2 border-foreground-contrast">
+              <div className="w-1/5 h-full p-1 border-4 border-foreground-contrast">
+                <p className="p-1 italic bg-foreground-contrast h-fit w-fit">
+                  Project
+                </p>
               </div>
-              <div className="border-foreground-contrast h-full w-4/5 border-4 p-1">
-                <p className="bg-foreground-contrast h-fit w-fit p-1 italic">Content</p>
+              <div className="w-4/5 h-full p-1 border-4 border-foreground-contrast">
+                <p className="p-1 italic bg-foreground-contrast h-fit w-fit">
+                  Content
+                </p>
               </div>
             </div>
           </div>
