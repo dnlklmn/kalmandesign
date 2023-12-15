@@ -6,9 +6,9 @@ let y: number;
 let entryX: number;
 let entryY: number;
 
-export default function RadicleRedesignTeaser({ linkTo }: { linkTo: string }) {
-  const imageContainer: HTMLElement | null = document.getElementById("image-container");
+const imageContainer: HTMLElement | null = document.getElementById("image-container");
 
+export default function RadicleRedesignTeaser({ linkTo }: { linkTo: string }) {
   function registerEntry(event: React.MouseEvent<HTMLDivElement>) {
     // Get position of the cursor within the div.
     entryX = event.clientX;
@@ -39,19 +39,17 @@ export default function RadicleRedesignTeaser({ linkTo }: { linkTo: string }) {
   }
 
   return (
-    <div
-      id="tracking-div"
-      onPointerMove={followCursor}
-      onMouseOut={returnToStart}
-      onMouseEnter={registerEntry}
-      className="relative h-fit w-1/2"
-    >
+    <div id="tracking-div" className="relative h-fit w-1/2">
       <Link to={linkTo}>
         <>
           <img src={Home} />
           <div
+            style={{ left: x }}
             id="image-container"
             className="trasnsition-all absolute -left-2 -top-2 flex h-full w-full flex-col gap-2"
+            onPointerMove={followCursor}
+            onMouseOut={returnToStart}
+            onMouseEnter={registerEntry}
           >
             <div className="border-foreground-contrast h-fit w-full border-4 p-1">
               <p className="bg-foreground-contrast h-fit w-fit p-1 italic">App</p>
