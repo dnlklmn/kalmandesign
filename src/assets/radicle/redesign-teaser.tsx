@@ -17,6 +17,7 @@ export default function RadicleRedesignTeaser({ linkTo }: { linkTo: string }) {
   }
 
   function followCursor(event: React.MouseEvent<HTMLDivElement>) {
+    event.preventDefault();
     x = event.clientX - entryX; // X position within the div.
     y = event.clientY - entryY; // Y position within the div.}
 
